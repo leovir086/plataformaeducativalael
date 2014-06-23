@@ -240,3 +240,12 @@ in /var/www/plataformaeducativalael/index.php (13)
 2014/06/23 13:32:57 [warning] [application] Failed to set unsafe attribute "validation" of "User".
 in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
 in /var/www/plataformaeducativalael/index.php (13)
+2014/06/23 15:22:40 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/23 15:22:54 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/23 15:46:42 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
