@@ -22,44 +22,44 @@
     <?php echo $form->errorSummary($model); ?>
 
     <div class="row">
-        <?php echo $form->labelEx($model, 'direccion_correo *:'); ?>
+        <?php echo $form->labelEx($model, 'email'); ?>
         <?php echo $form->textField($model, 'email', array('size' => 60, 'maxlength' => 80)); ?>
         <?php echo $form->error($model, 'email'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model, 'nombre_usuario *:'); ?>
+        <?php echo $form->labelEx($model, 'username'); ?>
         <?php echo $form->textField($model, 'username', array('size' => 60, 'maxlength' => 80)); ?>
         <?php echo $form->error($model, 'username'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model, 'contrasenia * :'); ?>
+        <?php echo $form->labelEx($model, 'password'); ?>
         <?php echo $form->passwordField($model, 'password', array('size' => 60, 'maxlength' => 80)); ?>
         <?php echo $form->error($model, 'password'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model, 'repetir_contrasenia * :'); ?>
+        <?php echo $form->labelEx($model, 'password_again'); ?>
         <?php echo $form->passwordField($model, 'password_again', array('size' => 60, 'maxlength' => 80)); ?>
         <?php echo $form->error($model, 'password_again'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model, 'nombres:'); ?>
+        <?php echo $form->labelEx($model, 'first_name'); ?>
         <?php echo $form->textField($model, 'first_name', array('size' => 60, 'maxlength' => 80)); ?>
         <?php echo $form->error($model, 'first_name'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model, 'apellidos:'); ?>
+        <?php echo $form->labelEx($model, 'last_name'); ?>
         <?php echo $form->textField($model, 'last_name', array('size' => 60, 'maxlength' => 80)); ?>
         <?php echo $form->error($model, 'last_name'); ?>
     </div>
 
 
     <div class="row">
-        <?php echo $form->labelEx($model, 'Profesion * :'); ?>
+        <?php echo $form->labelEx($model, 'id_ocupation'); ?>
 
         <table>
             <tr><td><?php
@@ -83,14 +83,14 @@
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model, 'fecha_nacimiento :'); ?>
+        <?php echo $form->labelEx($model, 'date_birth'); ?>
         <?php
         $this->widget('zii.widgets.jui.CJuiDatePicker', array(
             'model' => $model,
             'attribute' => 'date_birth',
             'options' => array(
                 'showOn' => 'both',
-                'dateFromat' => 'yyyy-mm-dd',
+                'dateFormat' => 'yy-mm-dd',
                 'showOtherMonths' => true,
                 'selectOtherMonths' => true,
                 'changeYear' => true,
@@ -106,8 +106,8 @@
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model, 'sexo:'); ?>
-        <?php echo $form->dropDownList($model, 'sex', array('M' => 'Masculino', 'F' => 'Femenino')) ?>
+        <?php echo $form->labelEx($model, 'sex'); ?>
+        <?php echo $form->dropDownList($model, 'sex', array('0' => 'Masculino', '1' => 'Femenino')) ?>
         <?php echo $form->error($model, 'sex'); ?>
     </div>
     <div class="row">

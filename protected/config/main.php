@@ -7,8 +7,10 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
-
+	'name'=>'Plataforma Educativa LAEL',
+        'sourceLanguage' => 'en',
+        'language' => 'es',
+    
 	// preloading 'log' component
 	'preload'=>array('log'),
 
@@ -16,6 +18,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+                'ext.YiiMailer.YiiMailer',
 	),
 
 	'modules'=>array(
@@ -51,7 +54,6 @@ return array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
 		// uncomment the following to use a MySQL database
-		
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=plataformaeducativalael',
 			'emulatePrepare' => true,
@@ -60,7 +62,15 @@ return array(
 			'charset' => 'utf8',
                         'enableProfiling' => true,
 		),
-		
+                // server
+		/*'db'=>array(
+			'connectionString' => 'mysql:host=localhost;dbname=a3510430_platafo',
+			'emulatePrepare' => true,
+			'username' => 'a3510430_root',
+			'password' => 'a3510430_root',
+			'charset' => 'utf8',
+                        'enableProfiling' => true,
+		),*/
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
@@ -86,6 +96,17 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>'omar.huanca.balboa@gmail.com',
+                '_constant'=>array(
+                    'setFromRegister'=>'websolutionssrl@gmail.com',
+                    'setSubjectRegister'=>'Verificación de la dirección de correo electrónico',
+                    'setBodyRegister'=>'Este mensaje contiene instrucciones para verificar esta dirección de correo electrónico. Si no realizó esta petición, por favor, ignora este correo electrónico o póngase en contacto con nuestro administrador. 
+                                        Para verificar esta dirección de correo electrónico, abra el siguiente enlace:<br ><br >',
+                    'nameRegister'=>'Administrador',
+                    'setBodyBelowRegister'=>'<br ><br >Si el enlace no se abre correctamente, intente copiarlo y pegarlo en la barra de direcciones del navegador.',
+                    'emailInstruccionRegister'=>'Un correo electrónico que contiene más instrucctions ha sido enviada a la dirección de correo electrónico proveedor',
+                ),
 	),
+    
+
 );

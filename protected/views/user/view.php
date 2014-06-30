@@ -15,6 +15,7 @@ $this->menu=array(
 	array('label'=>'Manage User', 'url'=>array('admin'), 'visible'=>!Yii::app()->user->isGuest),
 );
 ?>
+<h2> Un correo electrónico que contiene más instrucctions ha sido enviada a la dirección de correo electrónico proveedor</h2>
 
 <h1>View User #<?php echo $model->id_user; ?></h1>
 

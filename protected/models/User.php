@@ -16,7 +16,9 @@
  * @property string $facebook_id
  * @property string $plus_id
  * @property string $twitter_id
- *
+ * @property string $activationKey
+ * @property numeric $state_user
+ * 
  * The followings are the available model relations:
  * @property Comment[] $comments
  * @property Content[] $contents
@@ -31,6 +33,8 @@ class User extends CActiveRecord {
     public $validation;
     public $id_ocupation2;
     public $password_again;
+    public $activationKey;
+    public $state_user;
 
     /**
      * @return string the associated database table name
@@ -70,6 +74,9 @@ class User extends CActiveRecord {
                 'privateKey' => '6Le2OPUSAAAAAPdAbpZg59yctT_ZJ4cTexU1GwGK',
                 'on' => 'registerwcaptcha'
             ),
+            array('activationKey', 'required', 'on' => 'create'),
+            array('activationKey', 'unique', 'on' => 'create'),
+            array('state_user', 'required', 'on' => 'create'),
         );
     }
 
@@ -95,20 +102,21 @@ class User extends CActiveRecord {
     public function attributeLabels() {
         return array(
             'id_user' => 'Id User',
-            'id_ocupation' => 'Elija Ocupation',
+            'id_ocupation' => 'Ocupacion',
             'email' => 'Direccion de Correo',
             'username' => 'Nombre Usuario',
             'password' => 'Contrasenia',
-            'first_name' => 'First Name',
-            'last_name' => 'Last Name',
-            'date_birth' => 'Date Birth',
-            'sex' => 'Sex',
+            'first_name' => 'Nombres',
+            'last_name' => 'Apellidos',
+            'date_birth' => 'Fecha Nacimiento',
+            'sex' => 'Sexo',
             'facebook_id' => 'Facebook',
             'plus_id' => 'Plus',
             'twitter_id' => 'Twitter',
             'validation' => Yii::t('demo', 'Ingrese ambas palabras separadas de un espacio:'),
             'id_ocupation2' => 'Elegir una Categoria',
-            'password_again' => 'Repetir contrasenia'
+            'password_again' => 'Repetir contrasenia',
+            'verify_code' => 'Codigo Verificacion',
         );
     }
 

@@ -249,3 +249,1029 @@ in /var/www/plataformaeducativalael/index.php (13)
 2014/06/23 15:46:42 [warning] [application] Failed to set unsafe attribute "validation" of "User".
 in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
 in /var/www/plataformaeducativalael/index.php (13)
+2014/06/25 10:57:32 [error] [php] include(/var/www/plataformaeducativalael/protected/extensions/YiiMailer/YiiMailer.php): failed to open stream: No such file or directory (/var/www/plataformaeducativalael/framework/YiiBase.php:401)
+Stack trace:
+#0 /var/www/plataformaeducativalael/protected/controllers/SiteController.php(54): spl_autoload_call()
+#1 /var/www/plataformaeducativalael/framework/web/actions/CInlineAction.php(49): SiteController->actionContact()
+#2 /var/www/plataformaeducativalael/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/plataformaeducativalael/framework/web/CController.php(286): SiteController->runAction()
+#4 /var/www/plataformaeducativalael/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#5 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): SiteController->run()
+#6 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/plataformaeducativalael/index.php(13): CWebApplication->run()
+REQUEST_URI=/plataformaeducativalael/index.php/site/contact
+in /var/www/plataformaeducativalael/protected/controllers/SiteController.php (54)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/25 11:26:09 [error] [php] include(/var/www/plataformaeducativalael/protected/extensions/YiiMailer/YiiMailer.php): failed to open stream: No such file or directory (/var/www/plataformaeducativalael/framework/YiiBase.php:401)
+Stack trace:
+#0 /var/www/plataformaeducativalael/protected/controllers/SiteController.php(54): spl_autoload_call()
+#1 /var/www/plataformaeducativalael/framework/web/actions/CInlineAction.php(49): SiteController->actionContact()
+#2 /var/www/plataformaeducativalael/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/plataformaeducativalael/framework/web/CController.php(286): SiteController->runAction()
+#4 /var/www/plataformaeducativalael/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#5 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): SiteController->run()
+#6 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/plataformaeducativalael/index.php(13): CWebApplication->run()
+REQUEST_URI=/plataformaeducativalael/index.php/site/contact
+in /var/www/plataformaeducativalael/protected/controllers/SiteController.php (54)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/25 11:30:38 [error] [php] include(/var/www/plataformaeducativalael/protected/extensions/YiiMailer/YiiMailer.php): failed to open stream: No such file or directory (/var/www/plataformaeducativalael/framework/YiiBase.php:401)
+Stack trace:
+#0 /var/www/plataformaeducativalael/protected/controllers/SiteController.php(54): spl_autoload_call()
+#1 /var/www/plataformaeducativalael/framework/web/actions/CInlineAction.php(49): SiteController->actionContact()
+#2 /var/www/plataformaeducativalael/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/plataformaeducativalael/framework/web/CController.php(286): SiteController->runAction()
+#4 /var/www/plataformaeducativalael/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#5 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): SiteController->run()
+#6 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/plataformaeducativalael/index.php(13): CWebApplication->run()
+REQUEST_URI=/plataformaeducativalael/index.php/site/contact
+in /var/www/plataformaeducativalael/protected/controllers/SiteController.php (54)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/25 11:30:58 [error] [php] include(/var/www/plataformaeducativalael/protected/extensions/YiiMailer/YiiMailer.php): failed to open stream: No such file or directory (/var/www/plataformaeducativalael/framework/YiiBase.php:401)
+Stack trace:
+#0 /var/www/plataformaeducativalael/protected/controllers/SiteController.php(54): spl_autoload_call()
+#1 /var/www/plataformaeducativalael/framework/web/actions/CInlineAction.php(49): SiteController->actionContact()
+#2 /var/www/plataformaeducativalael/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/plataformaeducativalael/framework/web/CController.php(286): SiteController->runAction()
+#4 /var/www/plataformaeducativalael/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#5 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): SiteController->run()
+#6 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/plataformaeducativalael/index.php(13): CWebApplication->run()
+REQUEST_URI=/plataformaeducativalael/index.php/site/contact
+in /var/www/plataformaeducativalael/protected/controllers/SiteController.php (54)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/25 11:33:02 [error] [php] include(/var/www/plataformaeducativalael/protected/extensions/YiiMailer/YiiMailer.php): failed to open stream: No such file or directory (/var/www/plataformaeducativalael/framework/YiiBase.php:401)
+Stack trace:
+#0 /var/www/plataformaeducativalael/protected/controllers/SiteController.php(54): spl_autoload_call()
+#1 /var/www/plataformaeducativalael/framework/web/actions/CInlineAction.php(49): SiteController->actionContact()
+#2 /var/www/plataformaeducativalael/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/plataformaeducativalael/framework/web/CController.php(286): SiteController->runAction()
+#4 /var/www/plataformaeducativalael/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#5 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): SiteController->run()
+#6 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/plataformaeducativalael/index.php(13): CWebApplication->run()
+REQUEST_URI=/plataformaeducativalael/index.php/site/contact
+in /var/www/plataformaeducativalael/protected/controllers/SiteController.php (54)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/25 14:01:49 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (68)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/25 14:27:26 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (68)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/25 14:29:34 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (68)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/25 14:35:45 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (68)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/25 17:03:01 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (68)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/25 17:06:51 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (68)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/25 17:12:34 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (68)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/25 17:15:15 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (68)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 11:52:51 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (68)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 14:17:23 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 14:17:23 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "baseUrl".' in /var/www/plataformaeducativalael/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/plataformaeducativalael/protected/controllers/UserController.php(68): CComponent->__call('baseUrl', Array)
+#1 /var/www/plataformaeducativalael/protected/controllers/UserController.php(68): CWebApplication->baseUrl(true)
+#2 /var/www/plataformaeducativalael/framework/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#3 /var/www/plataformaeducativalael/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/plataformaeducativalael/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#13 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/create
+HTTP_REFERER=http://localhost/plataformaeducativalael/index.php/user/create
+---
+2014/06/26 14:17:53 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 14:22:12 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 14:22:13 [error] [php] Undefined variable: veify_code (/var/www/plataformaeducativalael/protected/controllers/UserController.php:75)
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#1 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#4 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): UserController->run()
+#8 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/plataformaeducativalael/index.php(13): CWebApplication->run()
+REQUEST_URI=/plataformaeducativalael/index.php/user/create
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (75)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 14:22:29 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 14:24:37 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 15:03:22 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 15:03:22 [error] [php] Undefined index: email (/var/www/plataformaeducativalael/protected/controllers/UserController.php:68)
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#1 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#4 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): UserController->run()
+#8 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/plataformaeducativalael/index.php(13): CWebApplication->run()
+REQUEST_URI=/plataformaeducativalael/index.php/user/create
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (68)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 15:03:38 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 15:06:34 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 15:16:33 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 15:17:31 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 15:20:35 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 15:20:35 [error] [php] Use of undefined constant code - assumed 'code' (/var/www/plataformaeducativalael/protected/controllers/UserController.php:77)
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#1 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#4 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): UserController->run()
+#8 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/plataformaeducativalael/index.php(13): CWebApplication->run()
+REQUEST_URI=/plataformaeducativalael/index.php/user/create
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (77)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 15:20:57 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 15:22:41 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 15:26:02 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 15:53:49 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 16:03:53 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 16:05:44 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 16:06:37 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 16:06:37 [error] [php] Undefined variable: ode (/var/www/plataformaeducativalael/protected/controllers/UserController.php:77)
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#1 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#4 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): UserController->run()
+#8 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/plataformaeducativalael/index.php(13): CWebApplication->run()
+REQUEST_URI=/plataformaeducativalael/index.php/user/create
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (77)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 16:06:48 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 16:08:23 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 16:10:00 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 16:11:08 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 16:12:12 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 16:13:04 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 16:16:07 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 16:19:15 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 16:19:15 [error] [php] Indirect modification of overloaded property User::$attributes has no effect (/var/www/plataformaeducativalael/protected/controllers/UserController.php:70)
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#1 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#4 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): UserController->run()
+#8 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/plataformaeducativalael/index.php(13): CWebApplication->run()
+REQUEST_URI=/plataformaeducativalael/index.php/user/create
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (70)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 16:20:34 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (67)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 16:21:53 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 16:23:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify/101...')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/10139cbbb1ab481e45ba32029d900eb6
+---
+2014/06/26 16:32:52 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 17:45:56 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 17:57:12 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/26 17:57:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify/ver...')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/verify_code/1c3393f3d2ec4609cbeaaff86106a64f
+HTTP_REFERER=http://www.google.com/url?q=http%3A%2F%2Flocalhost%2Fplataformaeducativalael%2Findex.php%2Fuser%2Fverify%2Fverify_code%2F1c3393f3d2ec4609cbeaaff86106a64f&sa=D&sntz=1&usg=AFQjCNF44oo3BenpemyUbL_mt4SZKi8J_g
+---
+2014/06/27 10:18:54 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 10:20:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify/ver...')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/verify_code/2b7769a92ccda82891bfb1c0bcddf407
+---
+2014/06/27 11:38:36 [error] [php] Undefined variable: command (/var/www/plataformaeducativalael/protected/components/UserIdentity.php:37)
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute()
+#1 /var/www/plataformaeducativalael/framework/base/CModel.php(159): CInlineValidator->validate()
+#2 /var/www/plataformaeducativalael/protected/controllers/SiteController.php(90): LoginForm->validate()
+#3 /var/www/plataformaeducativalael/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /var/www/plataformaeducativalael/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/plataformaeducativalael/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/plataformaeducativalael/index.php(13): CWebApplication->run()
+REQUEST_URI=/plataformaeducativalael/index.php/site/login
+in /var/www/plataformaeducativalael/protected/components/UserIdentity.php (37)
+in /var/www/plataformaeducativalael/protected/models/LoginForm.php (52)
+in /var/www/plataformaeducativalael/protected/controllers/SiteController.php (90)
+2014/06/27 11:38:57 [error] [php] Undefined variable: command (/var/www/plataformaeducativalael/protected/components/UserIdentity.php:38)
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute()
+#1 /var/www/plataformaeducativalael/framework/base/CModel.php(159): CInlineValidator->validate()
+#2 /var/www/plataformaeducativalael/protected/controllers/SiteController.php(90): LoginForm->validate()
+#3 /var/www/plataformaeducativalael/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /var/www/plataformaeducativalael/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/plataformaeducativalael/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/plataformaeducativalael/index.php(13): CWebApplication->run()
+REQUEST_URI=/plataformaeducativalael/index.php/site/login
+in /var/www/plataformaeducativalael/protected/components/UserIdentity.php (38)
+in /var/www/plataformaeducativalael/protected/models/LoginForm.php (52)
+in /var/www/plataformaeducativalael/protected/controllers/SiteController.php (90)
+2014/06/27 11:54:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify/ver...')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/verify_code/2b7769a92ccda82891bfb1c0bcddf407
+---
+2014/06/27 15:05:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify/ver...')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/verify_code/2b7769a92ccda82891bfb1c0bcddf407
+---
+2014/06/27 15:11:08 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 15:13:39 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 15:15:34 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 15:17:47 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 15:20:36 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 15:25:34 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 15:26:31 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 15:28:59 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 15:35:22 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 15:38:55 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 15:40:40 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 15:42:19 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 15:45:00 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 15:46:35 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 15:47:44 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 15:50:53 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 15:51:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify/c06...')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/c064351610e427468751992fc76758b9
+---
+2014/06/27 15:53:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify
+---
+2014/06/27 15:54:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/123456
+---
+2014/06/27 15:54:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/123456
+---
+2014/06/27 15:55:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/123456
+---
+2014/06/27 15:55:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify
+---
+2014/06/27 15:56:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify
+---
+2014/06/27 15:57:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/123456789
+---
+2014/06/27 15:58:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/123456789
+---
+2014/06/27 15:58:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/123456789
+---
+2014/06/27 15:58:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/123456789
+---
+2014/06/27 15:58:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/123456789
+---
+2014/06/27 15:58:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify
+---
+2014/06/27 15:58:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify
+---
+2014/06/27 15:58:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify
+---
+2014/06/27 15:58:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify
+---
+2014/06/27 15:58:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify
+---
+2014/06/27 15:58:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify
+---
+2014/06/27 15:58:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify
+---
+2014/06/27 16:03:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify/c06...')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/c064351610e427468751992fc76758b9
+---
+2014/06/27 16:03:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify
+---
+2014/06/27 16:04:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verify".' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('verify')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify/c06...')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/c064351610e427468751992fc76758b9
+---
+2014/06/27 16:05:42 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/plataformaeducativalael/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/plataformaeducativalael/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#9 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify/c06...')
+#10 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/c064351610e427468751992fc76758b9
+---
+2014/06/27 16:06:47 [error] [exception.CException] exception 'CException' with message 'UserController cannot find the requested view "login".' in /var/www/plataformaeducativalael/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#1 /var/www/plataformaeducativalael/protected/controllers/UserController.php(244): CController->render('login', Array)
+#2 /var/www/plataformaeducativalael/framework/web/actions/CInlineAction.php(49): UserController->actionVerify()
+#3 /var/www/plataformaeducativalael/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/plataformaeducativalael/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#12 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify/c06...')
+#13 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/c064351610e427468751992fc76758b9
+---
+2014/06/27 16:31:31 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 16:52:48 [error] [php] Undefined variable: verify_code (/var/www/plataformaeducativalael/protected/controllers/UserController.php:227)
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#1 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#4 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): UserController->run()
+#8 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/plataformaeducativalael/index.php(13): CWebApplication->run()
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/verify_code/c54c3f6e7a139dadbf9a519a27138688
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (227)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 16:53:57 [error] [exception.CException] exception 'CException' with message 'UserController cannot find the requested view "login".' in /var/www/plataformaeducativalael/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#1 /var/www/plataformaeducativalael/protected/controllers/UserController.php(244): CController->render('login', Array)
+#2 /var/www/plataformaeducativalael/framework/web/actions/CInlineAction.php(49): UserController->actionVerify()
+#3 /var/www/plataformaeducativalael/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/plataformaeducativalael/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#12 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify/ver...')
+#13 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/verify_code/c54c3f6e7a139dadbf9a519a27138688
+---
+2014/06/27 17:04:03 [error] [exception.CException] exception 'CException' with message 'UserController cannot find the requested view "login".' in /var/www/plataformaeducativalael/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#1 /var/www/plataformaeducativalael/protected/controllers/UserController.php(244): CController->render('login', Array)
+#2 /var/www/plataformaeducativalael/framework/web/actions/CInlineAction.php(49): UserController->actionVerify()
+#3 /var/www/plataformaeducativalael/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/plataformaeducativalael/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#12 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify/ver...')
+#13 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/verify_code/c54c3f6e7a139dadbf9a519a27138688
+---
+2014/06/27 17:08:34 [error] [exception.CException] exception 'CException' with message 'UserController cannot find the requested view "login".' in /var/www/plataformaeducativalael/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#1 /var/www/plataformaeducativalael/protected/controllers/UserController.php(244): CController->render('login', Array)
+#2 /var/www/plataformaeducativalael/framework/web/actions/CInlineAction.php(49): UserController->actionVerify()
+#3 /var/www/plataformaeducativalael/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/plataformaeducativalael/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#12 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify/ver...')
+#13 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/verify_code/c54c3f6e7a139dadbf9a519a27138688
+---
+2014/06/27 17:12:25 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/27 17:34:16 [warning] [application] Failed to set unsafe attribute "validation" of "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/30 10:42:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "usr/create".' in /var/www/plataformaeducativalael/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('usr/create')
+#1 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/usr/create
+HTTP_REFERER=http://localhost/plataformaeducativalael/index.php/site/login
+---
+2014/06/30 10:43:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "usr/create".' in /var/www/plataformaeducativalael/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('usr/create')
+#1 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/usr/create
+HTTP_REFERER=http://localhost/plataformaeducativalael/index.php/site/login
+---
+2014/06/30 11:15:12 [warning] [application] Error al establecer unsafe al atributo "validation" de "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/30 11:15:12 [error] [exception.CException] exception 'CException' with message 'La propiedad "User"."verify_code" no se encuentra definida.' in /var/www/plataformaeducativalael/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/db/ar/CActiveRecord.php(161): CComponent->__set('verify_code', 'b7ca71b2484e9ee...')
+#1 /var/www/plataformaeducativalael/protected/controllers/UserController.php(69): CActiveRecord->__set('verify_code', 'b7ca71b2484e9ee...')
+#2 /var/www/plataformaeducativalael/framework/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#3 /var/www/plataformaeducativalael/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/plataformaeducativalael/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#13 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/create
+HTTP_REFERER=http://localhost/plataformaeducativalael/index.php/user/create
+---
+2014/06/30 11:15:54 [warning] [application] Error al establecer unsafe al atributo "validation" de "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/30 11:15:54 [error] [php] Undefined variable: verify_code (/var/www/plataformaeducativalael/protected/controllers/UserController.php:73)
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#1 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#4 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): UserController->run()
+#8 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/plataformaeducativalael/index.php(13): CWebApplication->run()
+REQUEST_URI=/plataformaeducativalael/index.php/user/create
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (73)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/30 11:16:29 [warning] [application] Error al establecer unsafe al atributo "validation" de "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/30 11:19:28 [warning] [application] Error al establecer unsafe al atributo "validation" de "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/30 11:32:14 [warning] [application] Error al establecer unsafe al atributo "validation" de "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/30 11:32:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "messageInstrucctionsRegister" solicitada.' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('messageInstrucc...')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('messageInstrucc...')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/messageIns...')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/messageInstrucctionsRegister
+HTTP_REFERER=http://localhost/plataformaeducativalael/index.php/user/create
+---
+2014/06/30 11:32:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "messageInstrucctionsRegister" solicitada.' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('messageInstrucc...')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('messageInstrucc...')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/messageIns...')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/messageInstrucctionsRegister
+HTTP_REFERER=http://localhost/plataformaeducativalael/index.php/user/create
+---
+2014/06/30 11:32:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "messageInstrucctionsRegister" solicitada.' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('messageInstrucc...')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('messageInstrucc...')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/messageIns...')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/messageInstrucctionsRegister
+HTTP_REFERER=http://localhost/plataformaeducativalael/index.php/user/create
+---
+2014/06/30 11:32:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "messageInstrucctionsRegister" solicitada.' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('messageInstrucc...')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('messageInstrucc...')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/messageIns...')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/messageInstrucctionsRegister
+HTTP_REFERER=http://localhost/plataformaeducativalael/index.php/user/create
+---
+2014/06/30 11:32:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "messageInstrucctionsRegister" solicitada.' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('messageInstrucc...')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('messageInstrucc...')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/messageIns...')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/messageInstrucctionsRegister
+HTTP_REFERER=http://localhost/plataformaeducativalael/index.php/user/create
+---
+2014/06/30 11:32:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "messageInstrucctionsRegister" solicitada.' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('messageInstrucc...')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('messageInstrucc...')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/messageIns...')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/messageInstrucctionsRegister
+HTTP_REFERER=http://localhost/plataformaeducativalael/index.php/user/create
+---
+2014/06/30 11:32:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "messageInstrucctionsRegister" solicitada.' in /var/www/plataformaeducativalael/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(270): CController->missingAction('messageInstrucc...')
+#1 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('messageInstrucc...')
+#2 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/messageIns...')
+#3 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/messageInstrucctionsRegister
+HTTP_REFERER=http://localhost/plataformaeducativalael/index.php/user/create
+---
+2014/06/30 11:34:00 [warning] [application] Error al establecer unsafe al atributo "validation" de "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/30 11:34:01 [error] [php] strpos() expects parameter 1 to be string, array given (/var/www/plataformaeducativalael/framework/web/CController.php:706)
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(867): UserController->getViewFile()
+#1 /var/www/plataformaeducativalael/framework/web/CController.php(782): UserController->renderPartial()
+#2 /var/www/plataformaeducativalael/protected/controllers/UserController.php(89): UserController->render()
+#3 /var/www/plataformaeducativalael/framework/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#4 /var/www/plataformaeducativalael/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#6 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#9 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/plataformaeducativalael/framework/web/CController.php(265): UserController->runActionWithFilters()
+#12 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): UserController->run()
+#13 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/plataformaeducativalael/index.php(13): CWebApplication->run()
+REQUEST_URI=/plataformaeducativalael/index.php/user/create
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (89)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/30 11:34:17 [warning] [application] Error al establecer unsafe al atributo "validation" de "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/30 11:35:29 [warning] [application] Error al establecer unsafe al atributo "validation" de "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/30 11:36:05 [warning] [application] Error al establecer unsafe al atributo "validation" de "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/30 11:48:29 [warning] [application] Error al establecer unsafe al atributo "validation" de "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/30 11:48:30 [error] [php] Use of undefined constant id_user - assumed 'id_user' (/var/www/plataformaeducativalael/protected/controllers/UserController.php:89)
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#1 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#4 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): UserController->run()
+#8 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/plataformaeducativalael/index.php(13): CWebApplication->run()
+REQUEST_URI=/plataformaeducativalael/index.php/user/create
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (89)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/30 11:49:56 [warning] [application] Error al establecer unsafe al atributo "validation" de "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/30 11:50:41 [warning] [application] Error al establecer unsafe al atributo "validation" de "User".
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (66)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/30 11:51:44 [error] [php] Undefined variable: data (/var/www/plataformaeducativalael/protected/controllers/UserController.php:244)
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#1 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#4 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): UserController->run()
+#8 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/plataformaeducativalael/index.php(13): CWebApplication->run()
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/activationKey/319fdaa1fa4697a6f1ba53990870cb21
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (244)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/30 15:27:40 [error] [php] Undefined variable: data (/var/www/plataformaeducativalael/protected/controllers/UserController.php:244)
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#1 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#4 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): UserController->run()
+#8 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/plataformaeducativalael/index.php(13): CWebApplication->run()
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/activationKey/e54ec44e6296bc682141cf7d322ecc6d
+in /var/www/plataformaeducativalael/protected/controllers/UserController.php (244)
+in /var/www/plataformaeducativalael/index.php (13)
+2014/06/30 15:33:15 [error] [exception.CException] exception 'CException' with message 'UserController no ha podido encontrar la vista "messageWrongRegister" solicitada.' in /var/www/plataformaeducativalael/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/plataformaeducativalael/framework/web/CController.php(782): CController->renderPartial('messageWrongReg...', Array, true)
+#1 /var/www/plataformaeducativalael/protected/controllers/UserController.php(245): CController->render('messageWrongReg...', Array)
+#2 /var/www/plataformaeducativalael/framework/web/actions/CInlineAction.php(49): UserController->actionVerify()
+#3 /var/www/plataformaeducativalael/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/plataformaeducativalael/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/plataformaeducativalael/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/plataformaeducativalael/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/plataformaeducativalael/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/plataformaeducativalael/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/plataformaeducativalael/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(282): CController->run('verify')
+#12 /var/www/plataformaeducativalael/framework/web/CWebApplication.php(141): CWebApplication->runController('user/verify/act...')
+#13 /var/www/plataformaeducativalael/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/plataformaeducativalael/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/plataformaeducativalael/index.php/user/verify/activationKey/e54ec44e6296bc682141cf7d322ecc6d
+---
