@@ -42,7 +42,7 @@ $this->breadcrumbs = array(
     </div>
     <p>
 <?php //echo "No recuerdo nombre de usuario o contraseña? Ir a" ?>
-        <?php //echo CHtml::link('Recuperar Contrasenia', array('site/recovery')); ?>
+        <?php  //echo CHtml::link('Recuperar Contrasenia', array('site/recovery')); ?>
     </p>
     <p>
 <?php echo "¿No tienes una cuenta todavía? Ir a" ?>
