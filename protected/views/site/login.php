@@ -11,7 +11,7 @@ $this->breadcrumbs = array(
 
 <h1>Login</h1>
 
-<p>Please fill out the following form with your login credentials:</p>
+<p>Por favor complete el siguiente formulario con sus datos de acceso:</p>
 
 <div class="form">
     <?php
@@ -24,7 +24,7 @@ $this->breadcrumbs = array(
     ));
     ?>
 
-    <p class="note">Fields with <span class="required">*</span> are required.</p>
+    <p class="note">Los campos que lleven <span class="required">*</span> son requeridos.</p>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'username'); ?>
@@ -37,12 +37,12 @@ $this->breadcrumbs = array(
 <?php echo $form->passwordField($model, 'password'); ?>
 <?php echo $form->error($model, 'password'); ?>
         <p class="hint">
-            Hint: Deberias Iniciar sesion con cuenta de: <kbd>usuario </kbd>/<kbd>contrasenia</kbd>.
+            Deberias Iniciar sesion con cuenta de: <kbd>usuario </kbd>/<kbd>contrasenia</kbd>.
         </p>
     </div>
     <p>
 <?php //echo "No recuerdo nombre de usuario o contraseña? Ir a" ?>
-        <?php //echo CHtml::link('Recuperar Contrasenia', array('user/create')); ?>
+        <?php //echo CHtml::link('Recuperar Contrasenia', array('site/recovery')); ?>
     </p>
     <p>
 <?php echo "¿No tienes una cuenta todavía? Ir a" ?>

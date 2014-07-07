@@ -32,15 +32,7 @@ class UserIdentity extends CUserIdentity {
                 $connection = Yii::app()->db;
                 $command = $connection->createCommand($sql);
                 $command->execute();
-                
-                
-                /*$connection = Yii::app()->db;
-                $command->insert('sesion', array(
-                    'id_sesion' => DEFAULT,
-                    'id_user' => $user->id_user,
-                ));
-                $command->execute();
-                */
+ 
                 $this->errorCode = self::ERROR_NONE;
             }
         }

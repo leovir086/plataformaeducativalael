@@ -35,6 +35,7 @@ class User extends CActiveRecord {
     public $password_again;
     public $activationKey;
     public $state_user;
+    public $verifyCode;
 
     /**
      * @return string the associated database table name
@@ -77,6 +78,10 @@ class User extends CActiveRecord {
             array('activationKey', 'required', 'on' => 'create'),
             array('activationKey', 'unique', 'on' => 'create'),
             array('state_user', 'required', 'on' => 'create'),
+            array('username', 'required', 'on' => 'recovery'),
+            array('email', 'required', 'on' => 'recovery'),
+            // verifyCode needs to be entered correctly
+            array('verifyCode', 'captcha', 'allowEmpty' => !CCaptcha::checkRequirements()),
         );
     }
 
@@ -92,7 +97,7 @@ class User extends CActiveRecord {
             'replies' => array(self::HAS_MANY, 'Reply', 'id_user'),
             'sesions' => array(self::HAS_MANY, 'Sesion', 'id_user'),
             'idOcupation' => array(self::BELONGS_TO, 'Ocupation', 'id_ocupation'),
-            'userRols' => array(self::HAS_MANY, 'UserRol', 'id_user'),
+            'rols' => array(self::MANY_MANY, 'Rol', 'user_rol(id_user,id_rol)'),
         );
     }
 
@@ -211,6 +216,17 @@ class User extends CActiveRecord {
         $password = md5($this->password);
         $this->password = $password;
         return true;
+    }
+
+    /**
+     * Get the recent forms from the user id
+     * @param int user id online sesion
+     * @return array the most recently rols
+     */
+    public function getRecentRols($id_user) {
+        return $this->with('rols')->findAll(array(
+                'condition'=>'t.id_user='.$id_user,
+        ));
     }
 
 }

@@ -25,16 +25,16 @@ class UserController extends Controller {
      */
     public function accessRules() {
         return array(
-            array('allow', // allow all users to perform 'index', 'view', 'login', 'logout', 'create', 'select', 'verify' actions
-                'actions' => array('index', 'view', 'login', 'logout', 'create', 'select', 'verify'),
+            array('allow', // allow all users to perform 'index', 'login', 'logout', 'create', 'select', 'verify' actions
+                'actions' => array('index', 'login', 'logout', 'create', 'select', 'verify'),
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
                 'actions' => array('create', 'update'),
                 'users' => array('@'),
             ),
-            array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete'),
+            array('allow', // allow admin user to perform 'admin', 'delete', 'view' actions
+                'actions' => array('admin', 'delete', 'view'),
                 'users' => array('admin'),
             ),
             array('deny', // deny all users
@@ -75,9 +75,9 @@ class UserController extends Controller {
             if ($model->save()) {
                 $mail = new YiiMailer();
                 // set properties
-                $mail->setFrom(Yii::app()->params['_constant']['setFromRegister'], Yii::app()->params['_constant']['nameRegister']);
+                $mail->setFrom(Yii::app()->params['adminEmail'], Yii::app()->params['_constant']['nameRegister']);
                 $mail->setSubject(Yii::app()->params['_constant']['setSubjectRegister']);
-                $mail->setTo(Yii::app()->params['adminEmail']);
+                $mail->setTo($_POST['User']['email']);
                 $mail->setBody(Yii::app()->params['_constant']['setBodyRegister'].$code.Yii::app()->params['_constant']['setBodyBelowRegister']);
                 // send
                 if ($mail->send()) {
@@ -241,8 +241,10 @@ class UserController extends Controller {
             $command->execute();
             // display the login form
             $this->render('messageSucceedRegister', array('model' => $data));
+        }else{
+            $this->render('messageWrongRegister', array('model' => $data));
         }
-        $this->render('messageWrongRegister', array('model' => $data));
     }
+    
 
 }

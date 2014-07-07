@@ -2,6 +2,8 @@
 
 class SiteController extends Controller {
 
+    public $layout = 'column2';
+
     /**
      * Declares class-based actions.
      */
@@ -100,6 +102,28 @@ class SiteController extends Controller {
     public function actionLogout() {
         Yii::app()->user->logout();
         $this->redirect(Yii::app()->homeUrl);
+    }
+
+    /**
+     * Change new password user 
+     */
+    public function actionRecovery() {
+        /** @var RecoveryForm */
+        $model = new RecoveryForm('recovery');
+        // if it is ajax validation request
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'recovery') {
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+        // collect user input data
+        if (isset($_POST['RecoveryForm']['email']) || isset($_POST['RecoveryForm']['username'])) {
+            $model->attributes = $_POST['RecoveryForm'];
+            // validate user input and redirect to the previous page if valid
+            if ($model->validate())
+                $this->redirect(Yii::app()->user->returnUrl);
+        }
+        // display the login form
+        $this->render('recovery', array('model' => $model));
     }
 
 }
