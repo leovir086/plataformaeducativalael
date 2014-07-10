@@ -1,8 +1,8 @@
 <ul>
         <!-- Get the rols of user --> 
-	<?php foreach($this->getRecentRols() as $rols): ?>
+	<?php foreach($this->getRecentRols() as $user): ?>
             <!-- Got the relations rols from model user-->
-            <?php foreach($rols->rols as $rol):?>
+            <?php foreach($user->rols as $rol):?>
                     <!-- Get the form the real rol id-->
                     <?php foreach($this->getRecentForms($rol->id_rol) as $forms):?>
                         <?php foreach ($forms->forms as $form):?>

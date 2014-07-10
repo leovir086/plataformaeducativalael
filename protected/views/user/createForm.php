@@ -8,7 +8,7 @@
 
     <?php
     $form = $this->beginWidget('CActiveForm', array(
-        'id' => 'usuario-form',
+        'id' => 'create-form',
         // Please note: When you enable ajax validation, make sure the corresponding
         // controller action is handling ajax validation correctly.
         // There is a call to performAjaxValidation() commented in generated controller code.
@@ -39,11 +39,6 @@
         <?php echo $form->error($model, 'password'); ?>
     </div>
 
-    <div class="row">
-        <?php echo $form->labelEx($model, 'password_again'); ?>
-        <?php echo $form->passwordField($model, 'password_again', array('size' => 60, 'maxlength' => 80)); ?>
-        <?php echo $form->error($model, 'password_again'); ?>
-    </div>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'first_name'); ?>
@@ -110,34 +105,9 @@
         <?php echo $form->dropDownList($model, 'sex', array('0' => 'Masculino', '1' => 'Femenino')) ?>
         <?php echo $form->error($model, 'sex'); ?>
     </div>
-
-
-
-    <?php if (CCaptcha::checkRequirements()): ?>
-        <div class="row">
-            <?php echo $form->labelEx($model, 'verifyCode'); ?>
-            <div>
-                <?php $this->widget('CCaptcha'); ?>
-                <?php echo $form->textField($model, 'verifyCode'); ?>
-            </div>
-            <div class="hint">Introduzca las letras que aparecen arriba.
-                <br/>No hay distinción entre mayúsculas y minúsculas.</div>
-            <?php echo $form->error($model, 'verifyCode'); ?>
-        </div>
-    <?php endif; ?>
-
-    <div class="row">
-        <?php echo $form->hiddenField($model, 'facebook_id'); ?>
-    </div>
-
-    <div class="row">
-        <?php echo $form->hiddenField($model, 'plus_id'); ?>
-    </div>
-
-    <div class="row">
-        <?php echo $form->hiddenField($model, 'twitter_id'); ?>
-    </div>
-
+    
+    
+   
 
     <div class="row buttons">
         <?php echo CHtml::submitButton($model->isNewRecord ? 'Registrar' : 'Salvar'); ?>
@@ -146,4 +116,11 @@
 
     <?php $this->endWidget(); ?>
 
-</div><!-- form -->
+</div><!-- form --><?php
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+

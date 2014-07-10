@@ -37,7 +37,7 @@ $this->breadcrumbs = array(
 <?php echo $form->passwordField($model, 'password'); ?>
 <?php echo $form->error($model, 'password'); ?>
         <p class="hint">
-            Deberias Iniciar sesion con cuenta de: <kbd>usuario </kbd>/<kbd>contrasenia</kbd>.
+            Deberias Iniciar sesion con cuenta de: <kbd>usuario</kbd>/<kbd>contrasenia</kbd>.
         </p>
     </div>
     <p>

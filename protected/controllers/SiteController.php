@@ -2,7 +2,7 @@
 
 class SiteController extends Controller {
 
-    public $layout = 'column2';
+    public $layout = 'column3';
 
     /**
      * Declares class-based actions.
@@ -77,7 +77,7 @@ class SiteController extends Controller {
      * Displays the login page
      */
     public function actionLogin() {
-        $model = new LoginForm;
+        $model = new LoginForm('login');
 
         // if it is ajax validation request
         if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form') {

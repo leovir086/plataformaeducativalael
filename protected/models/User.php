@@ -51,37 +51,36 @@ class User extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('id_ocupation, email', 'required'),
+            array('id_ocupation', 'required'),
             array('id_ocupation', 'numerical', 'integerOnly' => true),
             array('email, username, password, first_name, last_name', 'length', 'max' => 80),
             array('sex, facebook_id, plus_id, twitter_id', 'length', 'max' => 8),
             array('date_birth', 'safe'),
+            // scenario action create user controller
+            array('email', 'required', 'on' => 'create'),
             array('email', 'email', 'on' => 'create'),
             array('email', 'unique', 'on' => 'create'),
+            array('username', 'required', 'on' => 'create'),
+            array('username', 'unique', 'on' => 'create'),
             array('username',
                 'match', 'not' => true, 'pattern' => '/[^a-zA-Z_0-9-]/',
                 'message' => 'Invalidos caracteres en nombre usuario.',
                 'on' => 'create'
             ),
-            array('username', 'required', 'on' => 'create'),
-            array('username', 'unique', 'on' => 'create'),
-            array('password', 'authenticate', 'on' => 'login'),
-            array('password', 'required'),
+            array('password', 'required', 'on' => 'create'),
             array('password', 'compare', 'compareAttribute' => 'password_again', 'on' => 'create'),
             array('password_again', 'required', 'on' => 'create'),
-            array('id_ocupation2', 'required'),
-            array('validation',
-                'application.extensions.recaptcha.EReCaptchaValidator',
-                'privateKey' => '6Le2OPUSAAAAAPdAbpZg59yctT_ZJ4cTexU1GwGK',
-                'on' => 'registerwcaptcha'
-            ),
-            array('activationKey', 'required', 'on' => 'create'),
-            array('activationKey', 'unique', 'on' => 'create'),
-            array('state_user', 'required', 'on' => 'create'),
-            array('username', 'required', 'on' => 'recovery'),
-            array('email', 'required', 'on' => 'recovery'),
+            array('id_ocupation2', 'required', 'on' => 'create'),
             // verifyCode needs to be entered correctly
             array('verifyCode', 'captcha', 'allowEmpty' => !CCaptcha::checkRequirements()),
+            array('activationKey', 'required'),
+            array('state_user', 'required'),
+            // scenario action login site controller
+            array('username', 'required', 'on' => 'login'),
+            array('password', 'authenticate', 'on' => 'login'),
+            // scenario action recovery site controller
+            array('username', 'required', 'on' => 'recovery'),
+            // scenario action create user user controller
         );
     }
 
@@ -118,10 +117,9 @@ class User extends CActiveRecord {
             'facebook_id' => 'Facebook',
             'plus_id' => 'Plus',
             'twitter_id' => 'Twitter',
-            'validation' => Yii::t('demo', 'Ingrese ambas palabras separadas de un espacio:'),
             'id_ocupation2' => 'Elegir una Categoria',
+            'verifyCode' => 'Codigo Verificacion', 
             'password_again' => 'Repetir contrasenia',
-            'verify_code' => 'Codigo Verificacion',
         );
     }
 
@@ -225,7 +223,7 @@ class User extends CActiveRecord {
      */
     public function getRecentRols($id_user) {
         return $this->with('rols')->findAll(array(
-                'condition'=>'t.id_user='.$id_user,
+                    'condition' => 't.id_user=' . $id_user,
         ));
     }
 

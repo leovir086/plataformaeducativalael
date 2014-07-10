@@ -26,11 +26,11 @@ class UserController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index', 'login', 'logout', 'create', 'select', 'verify' actions
-                'actions' => array('index', 'login', 'logout', 'create', 'select', 'verify'),
+                'actions' => array('index', 'login', 'logout', 'create', 'select', 'verify', 'captcha'),
                 'users' => array('*'),
             ),
-            array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'update'),
+            array('allow', // allow authenticated user to perform 'update' actions
+                'actions' => array('update'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin', 'delete', 'view' actions
@@ -78,7 +78,7 @@ class UserController extends Controller {
                 $mail->setFrom(Yii::app()->params['adminEmail'], Yii::app()->params['_constant']['nameRegister']);
                 $mail->setSubject(Yii::app()->params['_constant']['setSubjectRegister']);
                 $mail->setTo($_POST['User']['email']);
-                $mail->setBody(Yii::app()->params['_constant']['setBodyRegister'].$code.Yii::app()->params['_constant']['setBodyBelowRegister']);
+                $mail->setBody(Yii::app()->params['_constant']['setBodyRegister'] . $code . Yii::app()->params['_constant']['setBodyBelowRegister']);
                 // send
                 if ($mail->send()) {
                     Yii::app()->user->setFlash('contact', 'Thank you for contacting us. We will respond to you as soon as possible.');
@@ -86,7 +86,6 @@ class UserController extends Controller {
                     Yii::app()->user->setFlash('error', 'Error while sending email: ' . $mail->getError());
                 }
             }
-            $this->redirect(array('view', 'id' => $model->id_user));
         }
 
         $this->render('create', array('model' => $model,));
@@ -241,10 +240,59 @@ class UserController extends Controller {
             $command->execute();
             // display the login form
             $this->render('messageSucceedRegister', array('model' => $data));
-        }else{
+        } else {
             $this->render('messageWrongRegister', array('model' => $data));
         }
     }
-    
+
+    /**
+     * Creates a new model.
+     * If creation is successful, the browser will be redirected to the 'view' page.
+     */
+    public function actionCreateUser() {
+
+        $model = new User('create');
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
+        if (isset($_POST['User'])) {
+            $model->attributes = $_POST['User'];
+            // generate verify code
+            $activationKey = md5($_POST['User']['email'] . time());
+            $model->activationKey = $activationKey;
+            // set state unable
+            $model->state_user = 0;
+            // generate the url verify email
+            $code = Yii::app()->getBaseUrl(true) . '/index.php/user/verify/activationKey/' . $activationKey;
+            // save the data to model
+            if ($model->save()) {
+                $mail = new YiiMailer();
+                // set properties
+                $mail->setFrom(Yii::app()->params['adminEmail'], Yii::app()->params['_constant']['nameRegister']);
+                $mail->setSubject(Yii::app()->params['_constant']['setSubjectRegister']);
+                $mail->setTo($_POST['User']['email']);
+                $mail->setBody(Yii::app()->params['_constant']['setBodyRegister'] . $code . Yii::app()->params['_constant']['setBodyBelowRegister']);
+                // send
+                if ($mail->send()) {
+                    Yii::app()->user->setFlash('contact', 'Thank you for contacting us. We will respond to you as soon as possible.');
+                } else {
+                    Yii::app()->user->setFlash('error', 'Error while sending email: ' . $mail->getError());
+                }
+            }
+        }
+
+        $this->render('createForm', array('model' => $model,));
+    }
+
+    /**
+     * 
+     */
+    public function actions() {
+        return array(
+            'captcha' => array(
+                'class' => 'CCaptchaAction',
+                'backColor' => 0xFFFFFF,
+            ),
+        );
+    }
 
 }
