@@ -10,6 +10,8 @@ return array(
 	'name'=>'Plataforma Educativa LAEL',
         'sourceLanguage' => 'en',
         'language' => 'es',
+        'charset' => 'utf-8',
+        'theme' => 'charisma',
     
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -19,6 +21,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
                 'ext.YiiMailer.YiiMailer',
+                'ext.cascadedropdown.ECascadeDropDown',
 	),
 
 	'modules'=>array(
@@ -75,11 +78,11 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				/*
+				
 				array(
 					'class'=>'CWebLogRoute',
 				),
-				*/
+				
 			),
 		),
 	),

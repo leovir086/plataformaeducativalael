@@ -56,31 +56,37 @@
         <?php echo $form->textField($model, 'last_name', array('size' => 60, 'maxlength' => 80)); ?>
         <?php echo $form->error($model, 'last_name'); ?>
     </div>
-
-
+    
     <div class="row">
         <?php echo $form->labelEx($model, 'id_ocupation'); ?>
 
         <table>
-            <tr><td><?php
-                    echo $form->dropDownList($model, 'id_ocupation2', CHtml::listData(Ocupation::model()->findAll('ocu_id_ocupation IS NULL'), 'id_ocupation', 'name_ocupation'), array(
-                        'prompt' => 'Seleccione Categoria',
-                        'ajax' => array(
-                            'type' => 'POST',
-                            'url' => CController::createUrl('User/select'),
-                            'update' => '#' . CHtml::activeId($model, 'id_ocupation'),
-                        ),
-                            )
-                    );
+            <tr><td>
+                    <?php
+                    $ocupationItems = CHtml::listData(Ocupation::model()->findAll('ocu_id_ocupation IS NULL'), 'id_ocupation', 'name_ocupation');
+                    echo CHtml::activeDropDownList($model, 'id_ocupation2', $ocupationItems,
+                    array('id'=>'id_ocupation2', 'prompt'=> 'Seleccione Categoria'));
                     ?> 
-                    <?php echo $form->error($model, 'id_ocupation2'); ?>
                 </td>
-                <td><?php echo $form->dropDownList($model, 'id_ocupation', array('prompt' => 'Selecione sub-categoria')); ?>
-                    <?php echo $form->error($model, 'id_ocupation'); ?>
+                <td>
+                    <?php
+                    
+                    $ocupationChilds = CHtml::listData(Ocupation::model()->findAll('id_ocupation=:id_ocupation',
+                    array(':id_ocupation'=>$model->id_ocupation)), 'id_ocupation', 'name_ocupation');
+                    echo CHtml::activeDropDownList($model, 'id_ocupation', $ocupationChilds,
+                    array('id'=>'id_ocupation', 'prompt'=> 'Seleccione Sub Categoria'));
+                    
+                    ECascadeDropDown::master('id_ocupation2')->setDependent('id_ocupation',
+                            array('dependentLoadingLabel'=>'Loading ocupations ...'),
+                            '/user/getOcupations');
+                     
+                     
+                    ?>
                 </td>
             </tr>
         </table>
     </div>
+    
 
     <div class="row">
         <?php echo $form->labelEx($model, 'date_birth'); ?>
@@ -95,6 +101,7 @@
                 'selectOtherMonths' => true,
                 'changeYear' => true,
                 'changeMonth' => true,
+                'yearRange' => '1950:2099',
             ),
             'htmlOptions' => array(
                 'size' => '10', // textField size
@@ -107,7 +114,7 @@
 
     <div class="row">
         <?php echo $form->labelEx($model, 'sex'); ?>
-        <?php echo $form->dropDownList($model, 'sex', array('0' => 'Masculino', '1' => 'Femenino')) ?>
+        <?php echo $form->dropDownList($model, 'sex', array('empty' => 'Seleccione Genero','0' => 'Masculino', '1' => 'Femenino')) ?>
         <?php echo $form->error($model, 'sex'); ?>
     </div>
 

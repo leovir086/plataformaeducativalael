@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19-may-2014, 15:00:33
+    Author     : Leonardo
+*/
+//.nav {float:left; width:900px; border:none; background:rgb(45,45,45) /*url(../image/bg_head_bottom_nav.jpg) no-repeat*/; color:rgb(75,75,75); font-size:120%;} /*Color navigation bar normal mode*/
+//.nav ul {list-style-type:none;}
+//.nav ul li {float:left; position:relative; z-index:auto !important /*Non-IE6*/; z-index:1000 /*IE6*/; border-right:solid 1px rgb(175,175,175);}
+//.nav ul li a {float:none !important /*Non-IE6*/; float:left /*IE-6*/; display:block; height:3.1em; line-height:3.1em; padding:0 16px 0 16px; text-decoration:none; font-weight:bold; color: rgb(100,100,100);}
+//.nav ul li ul {display:none; border:none;}
+
+//.nav ul li:hover a {background-color:rgb(210,210,210); text-decoration:none;} /*Color main cells hovering mode*/
+//.nav ul li:hover ul {display:block; width:10.0em; position:absolute; z-index:999; top:3.0em; margin-top:0.1em; left:0;}
+//.nav ul li:hover ul li a {display:block; width:10.0em; height:auto; line-height:1.3em; margin-left:-1px; padding:4px 16px 4px 16px; border-left:solid 1px rgb(175,175,175); border-bottom: solid 1px rgb(175,175,175); background-color:rgb(237,237,237); font-weight:normal; color:rgb(50,50,50);} /*Color subcells normal mode*/
+//.nav ul li:hover ul li a:hover {background-color:rgb(210,210,210); text-decoration:none;} /*Color subcells hovering mode*/
+
+.columna{
+    background: #FDFAEA;
+}
+.columna1{
+    background: #6f5499;
+}
+.columna2{
+    background: #003399;
+}
+
+#content
+{
+    padding: 10px;
+}
+.borderer
+{
+    padding: 0;
+    
+}
+.bs-docs-header{position:relative;padding:30px 15px;color:#cdbfe3;text-align:center;text-shadow:0 1px 0 rgba(0,0,0,.1);background-color:#6f5499;background-image:-webkit-linear-gradient(top,#563d7c 0,#6f5499 100%);background-image:linear-gradient(to bottom,#100d14 0,#100d14 100%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#100d14', endColorstr='#100d14', GradientType=0)}
+
+p{
+    font-size: 18px;
+    color:#ffffff;
+}
+
+.fondo_central {	
+    background-color: #FDFAEA;
+}
