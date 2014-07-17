@@ -16,8 +16,6 @@
  * @property string $facebook_id
  * @property string $plus_id
  * @property string $twitter_id
- * @property string $activationKey
- * @property numeric $state_user
  * 
  * The followings are the available model relations:
  * @property Comment[] $comments
@@ -51,36 +49,39 @@ class User extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('id_ocupation', 'required'),
             array('id_ocupation', 'numerical', 'integerOnly' => true),
             array('email, username, password, first_name, last_name', 'length', 'max' => 80),
             array('sex, facebook_id, plus_id, twitter_id', 'length', 'max' => 8),
             array('date_birth', 'safe'),
             // scenario action create user controller
-            array('email', 'required', 'on' => 'create'),
+            array('email, username, password, password_again, id_ocupation2', 'required', 'on' => 'create'),
             array('email', 'email', 'on' => 'create'),
-            array('email', 'unique', 'on' => 'create'),
-            array('username', 'required', 'on' => 'create'),
-            array('username', 'unique', 'on' => 'create'),
+            array('email, username', 'unique', 'on' => 'create'),
             array('username',
                 'match', 'not' => true, 'pattern' => '/[^a-zA-Z_0-9-]/',
                 'message' => 'Invalidos caracteres en nombre usuario.',
                 'on' => 'create'
             ),
-            array('password', 'required', 'on' => 'create'),
             array('password', 'compare', 'compareAttribute' => 'password_again', 'on' => 'create'),
-            array('password_again', 'required', 'on' => 'create'),
-            array('id_ocupation2', 'required', 'on' => 'create'),
             // verifyCode needs to be entered correctly
-            array('verifyCode', 'captcha', 'allowEmpty' => !CCaptcha::checkRequirements()),
+            array('verifyCode', 'captcha', 'allowEmpty' => !CCaptcha::checkRequirements(), 'on' => 'create'),
             array('activationKey', 'required'),
-            array('state_user', 'required'),
             // scenario action login site controller
             array('username', 'required', 'on' => 'login'),
             array('password', 'authenticate', 'on' => 'login'),
             // scenario action recovery site controller
             array('username', 'required', 'on' => 'recovery'),
-            // scenario action create user user controller
+            // scenario action register site controller
+            array('email, username, password, password_again, id_ocupation, id_ocupation2, state_user', 'required', 'on' => 'register'),
+            array('email', 'email', 'on' => 'register'),
+            array('email, username', 'unique', 'on' => 'register'),
+            array('username',
+                'match', 'not' => true, 'pattern' => '/[^a-zA-Z_0-9-]/',
+                'message' => 'Invalidos caracteres en nombre usuario.',
+                'on' => 'register'
+            ),
+            array('password', 'compare', 'compareAttribute' => 'password_again', 'on' => 'register'),
+            
         );
     }
 
@@ -117,9 +118,10 @@ class User extends CActiveRecord {
             'facebook_id' => 'Facebook',
             'plus_id' => 'Plus',
             'twitter_id' => 'Twitter',
-            'id_ocupation2' => 'Elegir una Categoria',
-            'verifyCode' => 'Codigo Verificacion', 
+            'id_ocupation2' => 'Sub Ocupacion',
+            'verifyCode' => 'Codigo Verificacion',
             'password_again' => 'Repetir contrasenia',
+            'state_user' => 'Estado Usuario',
         );
     }
 

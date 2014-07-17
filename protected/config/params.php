@@ -21,4 +21,12 @@ return array(
     'setBodyBelowRegister' => '<br ><br >Si el enlace no se abre correctamente, intente copiarlo y pegarlo en la barra de direcciones del navegador.',
 // this text show into when send message to email for account credential. 
     'emailInstruccionRegister' => 'Un correo electrónico que contiene más instrucctions ha sido enviada a la dirección de correo electrónico proveedor',
+// this text save in sesion when succeed email
+    'succeedSendRegister' => 'Gracias por contactar con nosotros. Nosotros le responderemos tan pronto como sea posible.',
+// this text save in sesion when wrong email
+    'worngSendRegister' => 'Error al enviar el correo electrónico:',
+// State user when is register
+    'stateUserUnavailable' => 0,
+// State user when is verify for email
+    'stateUserAvailable' => 1,
 );

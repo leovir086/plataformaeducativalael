@@ -9,16 +9,6 @@ class UserController extends Controller {
     public $layout = '//layouts/column2';
 
     /**
-     * @return array action filters
-     */
-    public function filters() {
-        return array(
-            'accessControl', // perform access control for CRUD operations
-            'postOnly + delete', // we only allow deletion via POST request
-        );
-    }
-
-    /**
      * Specifies the access control rules.
      * This method is used by the 'accessControl' filter.
      * @return array access control rules
@@ -26,15 +16,15 @@ class UserController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index', 'login', 'logout', 'create', 'select', 'verify' actions
-                'actions' => array('index', 'login', 'logout', 'create', 'select', 'verify', 'captcha','getOcupations'),
+                'actions' => array('index', 'login', 'logout', 'create', 'select', 'verify', 'captcha', 'getOcupations'),
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'update' actions
-                'actions' => array('update'),
+                'actions' => array('update', 'register'),
                 'users' => array('@'),
             ),
-            array('allow', // allow admin user to perform 'admin', 'delete', 'view' actions
-                'actions' => array('admin', 'delete', 'view'),
+            array('allow', // allow admin user to perform 'admin', 'delete', 'view', 'admin' actions
+                'actions' => array('admin', 'delete', 'view', 'admin'),
                 'users' => array('admin'),
             ),
             array('deny', // deny all users
@@ -58,17 +48,15 @@ class UserController extends Controller {
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
     public function actionCreate() {
-
         $model = new User('create');
-        // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
+        // verify change for POST
         if (isset($_POST['User'])) {
             $model->attributes = $_POST['User'];
             // generate verify code
             $activationKey = md5($_POST['User']['email'] . time());
             $model->activationKey = $activationKey;
             // set state unable
-            $model->state_user = 0;
+            $model->state_user = Yii::app()->params['_constant']['stateUserUnavailable'];
             // generate the url verify email
             $code = Yii::app()->getBaseUrl(true) . '/index.php/user/verify/activationKey/' . $activationKey;
             // save the data to model
@@ -81,11 +69,10 @@ class UserController extends Controller {
                 $mail->setBody(Yii::app()->params['_constant']['setBodyRegister'] . $code . Yii::app()->params['_constant']['setBodyBelowRegister']);
                 // send
                 if ($mail->send()) {
-                    Yii::app()->user->setFlash('contact', 'Thank you for contacting us. We will respond to you as soon as possible.');
+                    Yii::app()->user->setFlash('contact', Yii::app()->params['_constant']['succeedSendRegister']);
                 } else {
-                    Yii::app()->user->setFlash('error', 'Error while sending email: ' . $mail->getError());
+                    Yii::app()->user->setFlash('error', Yii::app()->params['_constant']['worngSendRegister'] . $mail->getError());
                 }
-                
             }
         }
 
@@ -220,16 +207,68 @@ class UserController extends Controller {
      * Get the items from table Ocupacion with foreign key to form create user
      */
     public function actionGetOcupations() {
-        //check if isAjaxRequest and the needed GET params are set 
+        //check if isAjaxRequest and the needed GET params are set
         ECascadeDropDown::checkValidRequest();
 
         //load the cities for the current province id (=ECascadeDropDown::submittedKeyValue())
-        $data = Ocupation::model()->findAll('ocu_id_ocupation=:id_ocupation', 
-                array(':id_ocupation' => ECascadeDropDown::submittedKeyValue())
-                );
-        //Convert the data by using 
-        //CHtml::listData, prepare the JSON-Response and Yii::app()->end 
+        $data = Ocupation::model()->findAll('ocu_id_ocupation=:id_ocupation', array(':id_ocupation' => ECascadeDropDown::submittedKeyValue())
+        );
+        //Convert the data by using
+        //CHtml::listData, prepare the JSON-Response and Yii::app()->end
         ECascadeDropDown::renderListData($data, 'id_ocupation', 'name_ocupation');
+    }
+
+    /**
+     * Create a new user for user admin.
+     */
+    public function actionRegister() {
+        // initialice Rol
+        $model_rol = new Rol;
+        // initialice User
+        $model = new User('register');
+        // verify the POST on submit.
+        if (isset($_POST['User'], $_POST['Rol'])) {
+            // fill the attribute the model
+            $model->attributes = $_POST['User'];
+            $model_rol->attributes = $_POST['Rol'];
+            // generate verify code
+            $activationKey = md5($_POST['User']['email'] . time());
+            $model->activationKey = $activationKey;
+            // set state unable
+            $model->state_user = 0;
+            // generate the url verify email
+            $code = Yii::app()->getBaseUrl(true) . '/index.php/user/verify/activationKey/' . $activationKey;
+            // validate both $model and $model_rol
+            $valid = $model->validate();
+            $valid = $model_rol->validate() && $valid;
+            if ($valid) {
+                // use false parameter to disable validation
+                $model->save(false);
+                // initialice UserRol
+                $model_user_rol = new UserRol;
+                // fill attributes
+                $model_user_rol->id_user = $model->id_user;
+                $model_user_rol->id_rol = $_POST['Rol']['id_rol'];
+                if ($model_user_rol->save()) {
+                    $mail = new YiiMailer();
+                    // set properties
+                    $mail->setFrom(Yii::app()->params['adminEmail'], Yii::app()->params['_constant']['nameRegister']);
+                    $mail->setSubject(Yii::app()->params['_constant']['setSubjectRegister']);
+                    $mail->setTo($_POST['User']['email']);
+                    $mail->setBody(Yii::app()->params['_constant']['setBodyRegister'] . $code . Yii::app()->params['_constant']['setBodyBelowRegister']);
+                    // send
+                    if ($mail->send()) {
+                        Yii::app()->user->setFlash('contact', Yii::app()->params['_constant']['succeedSendRegister']);
+                        $this->redirect('messageSucceedRegister');
+                    } else {
+                        Yii::app()->user->setFlash('error', Yii::app()->params['_constant']['worngSendRegister'] . $mail->getError());
+                        $this->redirect('messageWrongRegister');
+                    }
+                }
+            }
+        }
+        // redirect view default
+        $this->render('createForm', array('model' => $model, 'model_rol' => $model_rol));
     }
 
 }
