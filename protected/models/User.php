@@ -34,7 +34,19 @@ class User extends CActiveRecord {
     public $activationKey;
     public $state_user;
     public $verifyCode;
+    public static $array_sex;
 
+    /**
+     * 
+     * @param type $className
+     * @return type
+     */
+    public static function Usuario($className=__CLASS__){
+        $array_sex = array('empty' => 'Seleccione Genero', 'm' => 'Masculino', 'f' => 'Femenino');
+        return parent::model($className);
+    }
+    
+    
     /**
      * @return string the associated database table name
      */
@@ -49,20 +61,22 @@ class User extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('id_ocupation', 'numerical', 'integerOnly' => true),
             array('email, username, password, first_name, last_name', 'length', 'max' => 80),
-            array('sex, facebook_id, plus_id, twitter_id', 'length', 'max' => 8),
+            array('facebook_id, plus_id, twitter_id', 'length', 'max' => 8),
+            array('sexo', 'length', 'max' => 1),
             array('date_birth', 'safe'),
-            // scenario action create user controller
-            array('email, username, password, password_again, id_ocupation2', 'required', 'on' => 'create'),
-            array('email', 'email', 'on' => 'create'),
-            array('email, username', 'unique', 'on' => 'create'),
+            // scenario action create, register user controller
+            array('email, username, password, password_again, id_ocupation, id_ocupation2, state_user', 'required', 'on' => 'create, register'),
+            array('email', 'email', 'on' => 'create, register'),
+            array('email, username', 'unique', 'on' => 'create, register'),
             array('username',
                 'match', 'not' => true, 'pattern' => '/[^a-zA-Z_0-9-]/',
                 'message' => 'Invalidos caracteres en nombre usuario.',
-                'on' => 'create'
+                'on' => 'create, register'
             ),
-            array('password', 'compare', 'compareAttribute' => 'password_again', 'on' => 'create'),
+            array('password', 'compare', 'compareAttribute' => 'password_again', 'on' => 'create, register'),
+            array('id_ocupation', 'numerical', 'integerOnly' => true, 'on' => 'create, register'),
+            array('date_birth', 'type', 'type' => 'date', 'message' => '{attribute}: no puede ser fecha: yyyy-mm-dd', 'dateFormat' => 'yyyy-MM-dd', 'on' => 'create, register'),
             // verifyCode needs to be entered correctly
             array('verifyCode', 'captcha', 'allowEmpty' => !CCaptcha::checkRequirements(), 'on' => 'create'),
             array('activationKey', 'required'),
@@ -71,17 +85,8 @@ class User extends CActiveRecord {
             array('password', 'authenticate', 'on' => 'login'),
             // scenario action recovery site controller
             array('username', 'required', 'on' => 'recovery'),
-            // scenario action register site controller
-            array('email, username, password, password_again, id_ocupation, id_ocupation2, state_user', 'required', 'on' => 'register'),
-            array('email', 'email', 'on' => 'register'),
-            array('email, username', 'unique', 'on' => 'register'),
-            array('username',
-                'match', 'not' => true, 'pattern' => '/[^a-zA-Z_0-9-]/',
-                'message' => 'Invalidos caracteres en nombre usuario.',
-                'on' => 'register'
-            ),
-            array('password', 'compare', 'compareAttribute' => 'password_again', 'on' => 'register'),
-            
+            //@todo Please remove those attributes that should not be searched.
+            array('id_user, id_ocupation, email, username, first_name, last_name, date_birth, sex', 'safe', 'on' => 'search'),
         );
     }
 
@@ -106,7 +111,7 @@ class User extends CActiveRecord {
      */
     public function attributeLabels() {
         return array(
-            'id_user' => 'Id User',
+            'id_user' => 'Id',
             'id_ocupation' => 'Ocupacion',
             'email' => 'Direccion de Correo',
             'username' => 'Nombre Usuario',
@@ -146,14 +151,10 @@ class User extends CActiveRecord {
         $criteria->compare('id_ocupation', $this->id_ocupation);
         $criteria->compare('email', $this->email, true);
         $criteria->compare('username', $this->username, true);
-        $criteria->compare('password', $this->password, true);
         $criteria->compare('first_name', $this->first_name, true);
         $criteria->compare('last_name', $this->last_name, true);
         $criteria->compare('date_birth', $this->date_birth, true);
         $criteria->compare('sex', $this->sex, true);
-        $criteria->compare('facebook_id', $this->facebook_id, true);
-        $criteria->compare('plus_id', $this->plus_id, true);
-        $criteria->compare('twitter_id', $this->twitter_id, true);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
@@ -227,6 +228,25 @@ class User extends CActiveRecord {
         return $this->with('rols')->findAll(array(
                     'condition' => 't.id_user=' . $id_user,
         ));
+    }
+
+    /**
+     * Get the property array_sex
+     * @return array
+     */
+    public function getArraySex() {
+        return $this->array_sex;
+    }
+    
+    /**
+     * Get the current filter property sex.
+     * @param int $key
+     * @return array
+     */
+    public static function getSex($key=null){
+        if($key !== null)
+            return self::$array_sex[$key];
+        return self::$array_sex;
     }
 
 }

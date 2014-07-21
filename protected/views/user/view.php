@@ -8,16 +8,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List User', 'url'=>array('index'), 'visible'=>!Yii::app()->user->isGuest),
-	array('label'=>'Create User', 'url'=>array('create'), 'visible'=>!Yii::app()->user->isGuest),
-	array('label'=>'Update User', 'url'=>array('update', 'id'=>$model->id_user), 'visible'=>!Yii::app()->user->isGuest),
-	array('label'=>'Delete User', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_user),'confirm'=>'Are you sure you want to delete this item?'), 'visible'=>!Yii::app()->user->isGuest),
-	array('label'=>'Manage User', 'url'=>array('admin'), 'visible'=>!Yii::app()->user->isGuest),
+	array('label'=>'Actualizar Usuario', 'url'=>array('update', 'id'=>$model->id_user), 'visible'=>!Yii::app()->user->isGuest),
+	array('label'=>'Eliminar Usuario', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_user),'confirm'=>'Are you sure you want to delete this item?'), 'visible'=>!Yii::app()->user->isGuest),
 );
 ?>
-<h2> Un correo electrónico que contiene más instrucctions ha sido enviada a la dirección de correo electrónico proveedor</h2>
 
-<h1>View User #<?php echo $model->id_user; ?></h1>
+<h1>Ver Usuario #<?php echo $model->id_user; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

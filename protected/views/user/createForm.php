@@ -4,10 +4,10 @@
 
 $this->breadcrumbs = array(
     'Users' => array('index'),
-    'Registro',
+    'Registro Usuario',
 );
 ?>
 
-<h1>Registro</h1>
+<h1>Registro Usuario</h1>
 
 <?php $this->renderPartial('_formRegister', array('model' => $model,'model_rol'=>$model_rol)); ?>

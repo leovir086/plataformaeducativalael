@@ -101,7 +101,7 @@
                 'selectOtherMonths' => true,
                 'changeYear' => true,
                 'changeMonth' => true,
-                'yearRange' => '1950:2099',
+                'yearRange' => '1950:'.date('Y'),
             ),
             'htmlOptions' => array(
                 'size' => '10', // textField size
@@ -114,7 +114,7 @@
 
     <div class="row">
         <?php echo $form->labelEx($model, 'sex'); ?>
-        <?php echo $form->dropDownList($model, 'sex', array('empty' => 'Seleccione Genero','0' => 'Masculino', '1' => 'Femenino')) ?>
+        <?php echo $form->dropDownList($model, 'sex', $model->getArraySex()) ?>
         <?php echo $form->error($model, 'sex'); ?>
     </div>
 

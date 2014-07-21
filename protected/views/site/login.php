@@ -51,7 +51,7 @@ $this->breadcrumbs = array(
         <?php //echo CHtml::link('Recuperar Contrasenia', array('site/recovery')); ?>
     </p>
     <p>
-<?php echo "¿No tienes una cuenta todavía? Ir a" ?>
+<?php echo "¿No tienes una cuenta todavía? Ir a " ?>
 <?php echo CHtml::link('Registro', array('/user/create')); ?>
 </p>
 <div class="row buttons">

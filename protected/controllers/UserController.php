@@ -20,12 +20,12 @@ class UserController extends Controller {
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'update' actions
-                'actions' => array('update', 'register'),
+                'actions' => array('update'),
                 'users' => array('@'),
             ),
-            array('allow', // allow admin user to perform 'admin', 'delete', 'view', 'admin' actions
-                'actions' => array('admin', 'delete', 'view', 'admin'),
-                'users' => array('admin'),
+            array('allow', // allow admin user to perform 'admin', 'delete', 'view', 'admin', 'register' actions
+                'actions' => array('admin', 'delete', 'view', 'admin', 'register', 'flag'),
+                'users' => array('administrador'),
             ),
             array('deny', // deny all users
                 'users' => array('*'),
@@ -44,10 +44,11 @@ class UserController extends Controller {
     }
 
     /**
-     * Creates a new model.
+     * Creates a new model for user autorregulado.
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
     public function actionCreate() {
+        // initialize the object
         $model = new User('create');
         // verify change for POST
         if (isset($_POST['User'])) {
@@ -56,22 +57,23 @@ class UserController extends Controller {
             $activationKey = md5($_POST['User']['email'] . time());
             $model->activationKey = $activationKey;
             // set state unable
-            $model->state_user = Yii::app()->params['_constant']['stateUserUnavailable'];
+            $model->state_user = Yii::app()->params['stateUserUnavailable'];
             // generate the url verify email
             $code = Yii::app()->getBaseUrl(true) . '/index.php/user/verify/activationKey/' . $activationKey;
             // save the data to model
             if ($model->save()) {
+                // initialize the object
                 $mail = new YiiMailer();
                 // set properties
-                $mail->setFrom(Yii::app()->params['adminEmail'], Yii::app()->params['_constant']['nameRegister']);
-                $mail->setSubject(Yii::app()->params['_constant']['setSubjectRegister']);
+                $mail->setFrom(Yii::app()->params['adminEmail'], Yii::app()->params['nameRegister']);
+                $mail->setSubject(Yii::app()->params['setSubjectRegister']);
                 $mail->setTo($_POST['User']['email']);
-                $mail->setBody(Yii::app()->params['_constant']['setBodyRegister'] . $code . Yii::app()->params['_constant']['setBodyBelowRegister']);
+                $mail->setBody(Yii::app()->params['setBodyRegister'] . $code . Yii::app()->params['setBodyBelowRegister']);
                 // send
                 if ($mail->send()) {
-                    Yii::app()->user->setFlash('contact', Yii::app()->params['_constant']['succeedSendRegister']);
+                    Yii::app()->user->setFlash('succeedSendRegister', Yii::app()->params['succeedSendRegister']);
                 } else {
-                    Yii::app()->user->setFlash('error', Yii::app()->params['_constant']['worngSendRegister'] . $mail->getError());
+                    Yii::app()->user->setFlash('worngSendRegister', Yii::app()->params['wrongSendRegister'] . $mail->getError());
                 }
             }
         }
@@ -235,7 +237,7 @@ class UserController extends Controller {
             $activationKey = md5($_POST['User']['email'] . time());
             $model->activationKey = $activationKey;
             // set state unable
-            $model->state_user = 0;
+            $model->state_user = Yii::app()->params['stateUserUnavailable'];
             // generate the url verify email
             $code = Yii::app()->getBaseUrl(true) . '/index.php/user/verify/activationKey/' . $activationKey;
             // validate both $model and $model_rol
@@ -252,23 +254,38 @@ class UserController extends Controller {
                 if ($model_user_rol->save()) {
                     $mail = new YiiMailer();
                     // set properties
-                    $mail->setFrom(Yii::app()->params['adminEmail'], Yii::app()->params['_constant']['nameRegister']);
-                    $mail->setSubject(Yii::app()->params['_constant']['setSubjectRegister']);
+                    $mail->setFrom(Yii::app()->params['adminEmail'], Yii::app()->params['nameRegister']);
+                    $mail->setSubject(Yii::app()->params['setSubjectRegister']);
                     $mail->setTo($_POST['User']['email']);
-                    $mail->setBody(Yii::app()->params['_constant']['setBodyRegister'] . $code . Yii::app()->params['_constant']['setBodyBelowRegister']);
-                    // send
+                    $mail->setBody(Yii::app()->params['setBodyRegister'] . $code . Yii::app()->params['setBodyBelowRegister']);
+                    // send email
                     if ($mail->send()) {
-                        Yii::app()->user->setFlash('contact', Yii::app()->params['_constant']['succeedSendRegister']);
-                        $this->redirect('messageSucceedRegister');
+                        Yii::app()->user->setFlash('succeedSendRegister', Yii::app()->params['succeedSendRegister']);
                     } else {
-                        Yii::app()->user->setFlash('error', Yii::app()->params['_constant']['worngSendRegister'] . $mail->getError());
-                        $this->redirect('messageWrongRegister');
+                        Yii::app()->user->setFlash('wrongSendRegister', Yii::app()->params['wrongSendRegister'] . $mail->getError());
                     }
                 }
             }
         }
         // redirect view default
         $this->render('createForm', array('model' => $model, 'model_rol' => $model_rol));
+    }
+
+    /**
+     * We need to implement actionFlag
+     * @param type $pk
+     * @param type $name
+     * @param type $value
+     */
+    public function actionFlag($pk, $name, $value) {
+        $model = $this->loadModel($pk);
+        $model->{$name} = $value;
+        $model->save(false);
+
+
+        if (!Yii::app()->request->isAjaxRequest) {
+            $this->redirect('admin');
+        }
     }
 
 }

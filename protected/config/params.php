@@ -6,8 +6,6 @@ return array(
     'title' => 'Plataforma Educativa LAEL',
 // this is used in error pages
     'adminEmail' => 'omar.huanca.balboa@gmail.com',
-// whether post comments need to be approved before published
-    'commentNeedApproval' => true,
 // the copyright information displayed in the footer section
     'copyrightInfo' => 'Copyright &copy; 2009 by My Company.',
 // this text show into the Subject on Register
@@ -22,11 +20,17 @@ return array(
 // this text show into when send message to email for account credential. 
     'emailInstruccionRegister' => 'Un correo electrónico que contiene más instrucctions ha sido enviada a la dirección de correo electrónico proveedor',
 // this text save in sesion when succeed email
-    'succeedSendRegister' => 'Gracias por contactar con nosotros. Nosotros le responderemos tan pronto como sea posible.',
+    'succeedSendRegister' => 'Un correo electrónico que contiene más instrucctions ha sido enviada a la dirección de correo electrónico proporcionada',
 // this text save in sesion when wrong email
-    'worngSendRegister' => 'Error al enviar el correo electrónico:',
+    'wrongSendRegister' => 'Error al enviar el correo electrónico:',
 // State user when is register
     'stateUserUnavailable' => 0,
 // State user when is verify for email
     'stateUserAvailable' => 1,
+// Sex user identify Female
+    'sexUserFemale' => 'f',
+// Sex user identity Male
+    'sexUserMale' => 'm',
+// Date empty format value
+    'dateBirthEmpty' => 0000-00-00,
 );
