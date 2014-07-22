@@ -3,6 +3,19 @@
 /* @var $model User */
 /* @var $form CActiveForm */
 ?>
+<?php if (Yii::app()->user->hasFlash('succeedSendRegister')): ?>
+
+    <div>
+        <?php echo Yii::app()->user->getFlash('succeedSendRegister'); ?>
+    </div>
+
+<?php elseif (Yii::app()->user->hasFlash('wrongSendRegister')): ?>
+
+    <div>
+        <?php echo Yii::app()->user->getFlash('wrongSendRegister'); ?>
+    </div>
+
+<?php else: ?>
 
 <div class="form">
 
@@ -114,7 +127,7 @@
 
     <div class="row">
         <?php echo $form->labelEx($model, 'sex'); ?>
-        <?php echo $form->dropDownList($model, 'sex', $model->getArraySex()) ?>
+        <?php echo $form->dropDownList($model, 'sex', array('empty' => 'Seleccione Genero', 'm' => 'Masculino', 'f' => 'Femenino')) ?>
         <?php echo $form->error($model, 'sex'); ?>
     </div>
 
@@ -154,3 +167,5 @@
     <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+
+<?php endif;?>

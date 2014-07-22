@@ -6,4 +6,9 @@
  * and open the template in the editor.
  */
 ?>
+<p>
+    <?php echo "Si tienes una cuenta. Ir a" ?>
+    <?php echo CHtml::link('Login', array('/site/login')); ?>
+</p>
+
 <h2> Codigo de activacion incorrecto.</h2>

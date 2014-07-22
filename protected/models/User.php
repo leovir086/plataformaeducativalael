@@ -34,17 +34,7 @@ class User extends CActiveRecord {
     public $activationKey;
     public $state_user;
     public $verifyCode;
-    public static $array_sex;
-
-    /**
-     * 
-     * @param type $className
-     * @return type
-     */
-    public static function Usuario($className=__CLASS__){
-        $array_sex = array('empty' => 'Seleccione Genero', 'm' => 'Masculino', 'f' => 'Femenino');
-        return parent::model($className);
-    }
+    public static $array_sex = array('empty' => 'Seleccione Genero', 'm' => 'Masculino', 'f' => 'Femenino');
     
     
     /**
@@ -63,7 +53,6 @@ class User extends CActiveRecord {
         return array(
             array('email, username, password, first_name, last_name', 'length', 'max' => 80),
             array('facebook_id, plus_id, twitter_id', 'length', 'max' => 8),
-            array('sexo', 'length', 'max' => 1),
             array('date_birth', 'safe'),
             // scenario action create, register user controller
             array('email, username, password, password_again, id_ocupation, id_ocupation2, state_user', 'required', 'on' => 'create, register'),
@@ -77,6 +66,7 @@ class User extends CActiveRecord {
             array('password', 'compare', 'compareAttribute' => 'password_again', 'on' => 'create, register'),
             array('id_ocupation', 'numerical', 'integerOnly' => true, 'on' => 'create, register'),
             array('date_birth', 'type', 'type' => 'date', 'message' => '{attribute}: no puede ser fecha: yyyy-mm-dd', 'dateFormat' => 'yyyy-MM-dd', 'on' => 'create, register'),
+            array('sex', 'safe', 'on' => 'create, register'),
             // verifyCode needs to be entered correctly
             array('verifyCode', 'captcha', 'allowEmpty' => !CCaptcha::checkRequirements(), 'on' => 'create'),
             array('activationKey', 'required'),
@@ -208,17 +198,18 @@ class User extends CActiveRecord {
     public function primaryKey() {
         return $this->id_user;
     }
-
+    
     /*
      * Change the passwod encrypt to md5 in create user
      */
 
     public function beforeSave() {
-        $password = md5($this->password);
+        if($this->isNewRecord)
+            $password = md5($this->password);
         $this->password = $password;
         return true;
     }
-
+    
     /**
      * Get the recent forms from the user id
      * @param int user id online sesion
@@ -228,14 +219,6 @@ class User extends CActiveRecord {
         return $this->with('rols')->findAll(array(
                     'condition' => 't.id_user=' . $id_user,
         ));
-    }
-
-    /**
-     * Get the property array_sex
-     * @return array
-     */
-    public function getArraySex() {
-        return $this->array_sex;
     }
     
     /**

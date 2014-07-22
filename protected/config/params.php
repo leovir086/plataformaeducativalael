@@ -33,4 +33,6 @@ return array(
     'sexUserMale' => 'm',
 // Date empty format value
     'dateBirthEmpty' => 0000-00-00,
+// Number User Rol Auttoregulado
+    'RolUserAutorregulado' => 3,
 );

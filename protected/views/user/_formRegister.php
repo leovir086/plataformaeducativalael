@@ -123,7 +123,7 @@
 
         <div class="row">
             <?php echo $form->labelEx($model, 'sex'); ?>
-            <?php echo $form->dropDownList($model, 'sex', $model->getArraySex()) ?>
+            <?php echo $form->dropDownList($model, 'sex', array('empty' => 'Seleccione Genero', 'm' => 'Masculino', 'f' => 'Femenino')) ?>
             <?php echo $form->error($model, 'sex'); ?>
         </div>
 

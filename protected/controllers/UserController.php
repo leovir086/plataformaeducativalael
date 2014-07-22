@@ -62,23 +62,30 @@ class UserController extends Controller {
             $code = Yii::app()->getBaseUrl(true) . '/index.php/user/verify/activationKey/' . $activationKey;
             // save the data to model
             if ($model->save()) {
-                // initialize the object
-                $mail = new YiiMailer();
-                // set properties
-                $mail->setFrom(Yii::app()->params['adminEmail'], Yii::app()->params['nameRegister']);
-                $mail->setSubject(Yii::app()->params['setSubjectRegister']);
-                $mail->setTo($_POST['User']['email']);
-                $mail->setBody(Yii::app()->params['setBodyRegister'] . $code . Yii::app()->params['setBodyBelowRegister']);
-                // send
-                if ($mail->send()) {
-                    Yii::app()->user->setFlash('succeedSendRegister', Yii::app()->params['succeedSendRegister']);
-                } else {
-                    Yii::app()->user->setFlash('worngSendRegister', Yii::app()->params['wrongSendRegister'] . $mail->getError());
+                // initialice UserRol
+                $model_user_rol = new UserRol;
+                // fill attributes
+                $model_user_rol->id_user = $model->id_user;
+                $model_user_rol->id_rol = Yii::app()->params['RolUserAutorregulado'];
+                if ($model_user_rol->save()) {
+                    // initialize the object
+                    $mail = new YiiMailer();
+                    // set properties
+                    $mail->setFrom(Yii::app()->params['adminEmail'], Yii::app()->params['nameRegister']);
+                    $mail->setSubject(Yii::app()->params['setSubjectRegister']);
+                    $mail->setTo($_POST['User']['email']);
+                    $mail->setBody(Yii::app()->params['setBodyRegister'] . $code . Yii::app()->params['setBodyBelowRegister']);
+                    // send
+                    if ($mail->send()) {
+                        Yii::app()->user->setFlash('succeedSendRegister', Yii::app()->params['succeedSendRegister']);
+                    } else {
+                        Yii::app()->user->setFlash('worngSendRegister', Yii::app()->params['wrongSendRegister'] . $mail->getError());
+                    }
                 }
             }
         }
-
-        $this->render('create', array('model' => $model,));
+        // redirect create default
+        $this->render('create', array('model' => $model));
     }
 
     /**
@@ -267,7 +274,7 @@ class UserController extends Controller {
                 }
             }
         }
-        // redirect view default
+        // redirect createForm default
         $this->render('createForm', array('model' => $model, 'model_rol' => $model_rol));
     }
 
