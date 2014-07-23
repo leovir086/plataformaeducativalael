@@ -9,6 +9,16 @@ class UserController extends Controller {
     public $layout = '//layouts/column2';
 
     /**
+     * @return array action filters
+     */
+    public function filters() {
+        return array(
+            'accessControl', // perform access control for CRUD operations
+            'postOnly + delete', // we only allow deletion via POST request
+        );
+    }
+
+    /**
      * Specifies the access control rules.
      * This method is used by the 'accessControl' filter.
      * @return array access control rules
@@ -25,7 +35,7 @@ class UserController extends Controller {
             ),
             array('allow', // allow admin user to perform 'admin', 'delete', 'view', 'admin', 'register' actions
                 'actions' => array('admin', 'delete', 'view', 'admin', 'register', 'flag'),
-                'users' => array('administrador'),
+                'users' => array(Yii::app()->params['accountAdmin']),
             ),
             array('deny', // deny all users
                 'users' => array('*'),
@@ -66,7 +76,7 @@ class UserController extends Controller {
                 $model_user_rol = new UserRol;
                 // fill attributes
                 $model_user_rol->id_user = $model->id_user;
-                $model_user_rol->id_rol = Yii::app()->params['RolUserAutorregulado'];
+                $model_user_rol->id_rol = Yii::app()->params['rolUserAutorregulado'];
                 if ($model_user_rol->save()) {
                     // initialize the object
                     $mail = new YiiMailer();
@@ -232,9 +242,9 @@ class UserController extends Controller {
      */
     public function actionRegister() {
         // initialice Rol
-        $model_rol = new Rol;
+        $model_rol = new Rol('registerUser');
         // initialice User
-        $model = new User('register');
+        $model = new User('registerUser');
         // verify the POST on submit.
         if (isset($_POST['User'], $_POST['Rol'])) {
             // fill the attribute the model

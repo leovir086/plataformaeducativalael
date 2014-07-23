@@ -27,17 +27,17 @@ class RolController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+			array('allow',  
+				'actions'=>array(''),
 				'users'=>array('*'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+			array('allow', 
+				'actions'=>array(''),
 				'users'=>array('@'),
 			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+			array('allow', // allow admin user to perform 'admin', 'delete', 'create', 'update', 'index', 'view' actions
+				'actions'=>array('admin','delete','create', 'update', 'index', 'view'),
+				'users'=>array(Yii::app()->params['accountAdmin']),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -62,7 +62,7 @@ class RolController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Rol;
+		$model=new Rol('registerRol');
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);

@@ -35,8 +35,7 @@ class User extends CActiveRecord {
     public $state_user;
     public $verifyCode;
     public static $array_sex = array('empty' => 'Seleccione Genero', 'm' => 'Masculino', 'f' => 'Femenino');
-    
-    
+
     /**
      * @return string the associated database table name
      */
@@ -55,18 +54,14 @@ class User extends CActiveRecord {
             array('facebook_id, plus_id, twitter_id', 'length', 'max' => 8),
             array('date_birth', 'safe'),
             // scenario action create, register user controller
-            array('email, username, password, password_again, id_ocupation, id_ocupation2, state_user', 'required', 'on' => 'create, register'),
-            array('email', 'email', 'on' => 'create, register'),
-            array('email, username', 'unique', 'on' => 'create, register'),
-            array('username',
-                'match', 'not' => true, 'pattern' => '/[^a-zA-Z_0-9-]/',
-                'message' => 'Invalidos caracteres en nombre usuario.',
-                'on' => 'create, register'
-            ),
-            array('password', 'compare', 'compareAttribute' => 'password_again', 'on' => 'create, register'),
-            array('id_ocupation', 'numerical', 'integerOnly' => true, 'on' => 'create, register'),
-            array('date_birth', 'type', 'type' => 'date', 'message' => '{attribute}: no puede ser fecha: yyyy-mm-dd', 'dateFormat' => 'yyyy-MM-dd', 'on' => 'create, register'),
-            array('sex', 'safe', 'on' => 'create, register'),
+            array('email, username, password, password_again, id_ocupation, id_ocupation2, state_user', 'required', 'on' => 'create, registerUser'),
+            array('email', 'email', 'on' => 'create, registerUser'),
+            array('email, username', 'unique', 'on' => 'create, registerUser'),
+            array('username','match','pattern' => '/^[A-Za-z0-9\s,]+$/u','message' => 'Invalidos caracteres en nombre.','on' => 'create, registerUser'),        
+            array('password', 'compare', 'compareAttribute' => 'password_again', 'on' => 'create, registerUser'),
+            array('id_ocupation', 'numerical', 'integerOnly' => true, 'on' => 'create, registerUser'),
+            array('date_birth', 'type', 'type' => 'date', 'message' => '{attribute}: no puede ser fecha: yyyy-mm-dd', 'dateFormat' => 'yyyy-MM-dd', 'on' => 'create, registerUser'),
+            array('sex', 'safe', 'on' => 'create, registerUser'),
             // verifyCode needs to be entered correctly
             array('verifyCode', 'captcha', 'allowEmpty' => !CCaptcha::checkRequirements(), 'on' => 'create'),
             array('activationKey', 'required'),
@@ -198,18 +193,19 @@ class User extends CActiveRecord {
     public function primaryKey() {
         return $this->id_user;
     }
-    
+
     /*
      * Change the passwod encrypt to md5 in create user
      */
 
     public function beforeSave() {
-        if($this->isNewRecord)
+        if ($this->isNewRecord) {
             $password = md5($this->password);
-        $this->password = $password;
+            $this->password = $password;
+        }
         return true;
     }
-    
+
     /**
      * Get the recent forms from the user id
      * @param int user id online sesion
@@ -220,14 +216,14 @@ class User extends CActiveRecord {
                     'condition' => 't.id_user=' . $id_user,
         ));
     }
-    
+
     /**
      * Get the current filter property sex.
      * @param int $key
      * @return array
      */
-    public static function getSex($key=null){
-        if($key !== null)
+    public static function getSex($key = null) {
+        if ($key !== null)
             return self::$array_sex[$key];
         return self::$array_sex;
     }

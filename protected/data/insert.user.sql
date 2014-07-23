@@ -162,7 +162,10 @@ insert into user_rol values (default,3,3); -- autorregulado
 /* insert data table form */
 insert into form values (default,1,'Registro Usuario','/user/register'); -- administrador 
 insert into form values (default,1,'Administrar Usuarios','/user/admin'); 
-insert into form values (default,1,'Listar Usuarios','/user/index'); 
+insert into form values (default,1,'Listar Usuarios','/user/index');
+insert into form values (default,1,'Registro Rol','/rol/create');  
+insert into form values (default,1,'Administrar Roles','/rol/admin'); 
+insert into form values (default,1,'Listar Roles','/rol/index'); 
 insert into form values (default,2,'formulario coordinador 1','/user/formulario10'); -- coordinador
 insert into form values (default,2,'formulario coordinador 2','/user/formulario11');
 insert into form values (default,2,'formulario coordinador 3','/user/formulario12');
@@ -174,7 +177,9 @@ insert into form values (default,3,'formulario autorregulado 3','/user/formulari
 insert into rol_form values(default,1,1); -- administrador
 insert into rol_form values(default,1,2); 
 insert into rol_form values(default,1,3); 
-insert into rol_form values(default,1,4); 
+insert into rol_form values(default,1,4);
+insert into rol_form values(default,1,5); 
+insert into rol_form values(default,1,6);  
 insert into rol_form values(default,2,10); -- coordinador 
 insert into rol_form values(default,2,11); 
 insert into rol_form values(default,2,12); 

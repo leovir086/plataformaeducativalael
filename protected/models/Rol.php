@@ -30,12 +30,14 @@ class Rol extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('id_rol', 'required'),
-            array('id_rol', 'numerical', 'integerOnly' => true, 'on' => 'register'),
-            array('name_rol', 'length', 'max' => 80),
+            array('id_rol', 'required', 'on' => 'registerUser'),
+            array('id_rol', 'numerical', 'integerOnly' => true, 'on' => 'registerUser'),
+            array('name_rol', 'required', 'on' => 'registerRol'),
+            array('name_rol', 'length', 'max' => 80, 'on' => 'registerRol'),
+            array('name_rol','match','pattern' => '/^[A-Za-z0-9\s,]+$/u','message' => 'Invalidos caracteres en nombre.','on' => 'registerRol'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            //array('id_rol, name_rol', 'safe', 'on' => 'search'),
+            array('id_rol, name_rol', 'safe', 'on' => 'search'),
         );
     }
 
@@ -56,8 +58,8 @@ class Rol extends CActiveRecord {
      */
     public function attributeLabels() {
         return array(
-            'id_rol' => 'Rol',
-            'name_rol' => 'Nombre Rol',
+            'id_rol' => 'Id',
+            'name_rol' => 'Nombre',
         );
     }
 

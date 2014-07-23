@@ -34,5 +34,7 @@ return array(
 // Date empty format value
     'dateBirthEmpty' => 0000-00-00,
 // Number User Rol Auttoregulado
-    'RolUserAutorregulado' => 3,
+    'rolUserAutorregulado' => 3,
+// Username User Admin 
+    'accountAdmin' => 'admin',
 );
